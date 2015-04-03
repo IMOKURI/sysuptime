@@ -6,7 +6,8 @@ import Test.Hspec
 
 main :: IO ()
 main = hspec $ do
-  describe "Uptime" $ do
-    it "Outputs current uptime" $
-      c_uptime
+  describe "upTime" $ do
+    it "returns positive number" $ do
+      uptime <- upTime
+      uptime `shouldSatisfy` (>0)
 
