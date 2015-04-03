@@ -2,6 +2,7 @@ name:                sysuptime
 version:             0.1.0.0
 synopsis:            System uptime library in Haskell
 -- description:         
+homepage:            https://github.com/IMOKURI/sysuptime
 license:             MIT
 license-file:        LICENSE
 author:              IMOKURI
