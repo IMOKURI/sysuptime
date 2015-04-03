@@ -16,7 +16,8 @@ cabal-version:       >=1.10
 library
   hs-source-dirs:      src
   exposed-modules:     System.Uptime
-  extra-libraries:     proc-3.2.8
+  extra-libraries:     proc-3.2.8,
+                       netsnmp
   -- other-modules:       
   -- other-extensions:    
   ghc-options:         -Wall
