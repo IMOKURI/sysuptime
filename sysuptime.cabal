@@ -1,0 +1,34 @@
+name:                sysuptime
+version:             0.1.0.0
+synopsis:            System uptime library in Haskell
+-- description:         
+license:             MIT
+license-file:        LICENSE
+author:              IMOKURI
+maintainer:          nenegi.01mo@gmail.com
+-- copyright:           
+category:            System
+build-type:          Simple
+-- extra-source-files:  
+cabal-version:       >=1.10
+
+library
+  hs-source-dirs:      src
+  exposed-modules:     System.Uptime
+  extra-libraries:     proc-3.2.8
+  -- other-modules:       
+  -- other-extensions:    
+  ghc-options:         -Wall
+  build-depends:       base >=4.6 && <4.7
+  default-language:    Haskell2010
+
+test-suite tests
+  ghc-options:         -Wall
+  type:                exitcode-stdio-1.0
+  main-is:             Tests.hs
+  hs-source-dirs:      tests
+  build-depends:       base,
+                       sysuptime,
+                       hspec
+  default-language:    Haskell2010
+
