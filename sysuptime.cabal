@@ -1,7 +1,7 @@
 name:                sysuptime
 version:             0.1.0.0
 synopsis:            System uptime library in Haskell
--- description:         
+description:         Library that returns system uptime in 1/100 seconds
 homepage:            https://github.com/IMOKURI/sysuptime
 license:             MIT
 license-file:        LICENSE
@@ -10,18 +10,20 @@ maintainer:          nenegi.01mo@gmail.com
 copyright:           2015, IMOKURI
 category:            System
 build-type:          Simple
--- extra-source-files:  
+extra-source-files:  include/uptime.h
 cabal-version:       >=1.10
+
+source-repository head
+  type:                git
+  location:            git@github.com:IMOKURI/sysuptime.git
 
 library
   hs-source-dirs:      src
   exposed-modules:     System.Uptime
-  extra-libraries:     proc-3.2.8,
-                       netsnmp
-  -- other-modules:       
-  -- other-extensions:    
   ghc-options:         -Wall
   build-depends:       base >=4.6 && <4.7
+  include-dirs:        include/
+  c-sources:           cbits/uptime.c
   default-language:    Haskell2010
 
 test-suite tests

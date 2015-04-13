@@ -2,16 +2,15 @@
 
 System uptime library in Haskell
 
+[![Build Status](https://travis-ci.org/IMOKURI/sysuptime.svg?branch=master)](https://travis-ci.org/IMOKURI/sysuptime)
 
 ## Description
 
-* `upTime` returns system uptime in seconds
 * `sysUpTime` returns system uptime in 1/100 seconds
 
 
 ## Prerequisite
 
-* Library
-    - libproc-3.2.8.so
-    - libnetsnmp.so
+* Platform
+    - linux
 
